@@ -263,7 +263,7 @@ achievement(
     id = 417699,
     badge = "473021",
     title = "A Tiny Maze",
-    points = 1,
+    points = 2,
     description = "Get through Hanae's first maze and receive your reward",
     trigger = UnlockFlag(byte(0xccc7)) && in_game(),
     type = "progression"
@@ -273,7 +273,7 @@ achievement(
     id = 417700,
     badge = "473020",
     title = "I'm the Chef Now!",
-    points = 1,
+    points = 2,
     description = "Help Luigi finish his last order and receive your reward",
     trigger = UnlockFlag(byte(0xccd3)) && in_game(),
     type = "progression"
@@ -337,7 +337,7 @@ achievement(
     id = 417711,
     badge = "472995",
     title = "A Proud House Owner",
-    points = 2,
+    points = 3,
     description = "Give Genji the Homestead Seal and pay him a visit in his new home",
     trigger = gave_homestead_seal() == 0x01 && current_scene() == 0x009c && in_game()
 )
@@ -356,7 +356,7 @@ achievement(
     id = 417703,
     badge = "473017",
     title = "A Royal Meal",
-    points = 2,
+    points = 3,
     description = "Beat the Trespasser! mini game",
     trigger = current_scene() == 0x00d7 && prev(current_scene()) == 0x00d8 && in_game()
 )
@@ -416,7 +416,7 @@ achievement(
     id = 417710,
     badge = "472996",
     title = "The Inside of Toshiko's Mind",
-    points = 1,
+    points = 2,
     description = "Stay inside the mysterious box for a long time",
     trigger = current_scene() == 0x00a9 && box_dialog() == 0xf6  && in_game()
 )
@@ -437,7 +437,7 @@ achievement(
     id = 417712,
     badge = "472994",
     title = "All It Takes",
-    points = 1,
+    points = 2,
     description = "Give Shika the deer a bite ouf your cupcake",
     trigger = gave_shika_cupcake() == 1 && current_scene() == 0x0069 && in_game()
 )
@@ -446,7 +446,7 @@ achievement(
     id = 417743,
     badge = "472990",
     title = "The Great O'Oak Tree",
-    points = 2,
+    points = 3,
     description = "Find the hidden O'Oak Tree in the manor area",
     trigger = current_scene() == 0x0100 && prev(current_scene()) == 0x00a3 && in_game()
 )
