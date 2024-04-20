@@ -275,7 +275,7 @@ achievement(
     title = "I'm the Chef Now!",
     points = 2,
     description = "Help Luigi finish his last order and receive your reward",
-    trigger = UnlockFlag(byte(0xccd3)) && in_game(),
+    trigger = UnlockFlag(byte(0x00ccd9)) && in_game(),
     type = "progression"
 )
 
