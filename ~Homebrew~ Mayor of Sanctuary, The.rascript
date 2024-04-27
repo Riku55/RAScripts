@@ -13,6 +13,7 @@ function box_dialog() => byte(0x00ca35)
 function gave_homestead_seal() => byte(0x00cd43)
 function gave_shika_cupcake() => byte(0x00cd4d)
 function target_hit_count() => byte(0x00cd39)
+function vertical_screen_position() => byte(0x00ca54)
 
 function enemy_1_health() => byte(0x00cd7a)
 function enemy_2_health() => byte(0x00cd7b)
@@ -304,7 +305,7 @@ achievement(
     badge = "473024",
     title = "By the People",
     points = 10,
-    description = "Collect all keys and unlock the mansion's gates",
+    description = "Collect all keys and unlock the manor's gates",
     trigger = FlagsCompleteMeasuredWithoutSaveProtection(Keys)
     && gates_open() == 1 && prev(gates_open()) == 0 && in_game(),
     type = "progression"
@@ -448,7 +449,8 @@ achievement(
     title = "The Great O'Oak Tree",
     points = 3,
     description = "Find the hidden O'Oak Tree in the manor area",
-    trigger = current_scene() == 0x0100 && prev(current_scene()) == 0x00a3 && in_game()
+    trigger = current_scene() == 0x0100 && in_game() && vertical_screen_position() == 0
+                                        && screen_transition() == 0 && prev(vertical_screen_position()) == 1
 )
 
 
